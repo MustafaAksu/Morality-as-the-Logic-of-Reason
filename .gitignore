@@ -1,0 +1,22 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Jupyter & Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tmp
