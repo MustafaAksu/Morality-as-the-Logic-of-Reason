@@ -1,7 +1,7 @@
 # Morality as the Logic of Reason
 
-**Authors:**  
-Mustafa Aksu  
+**Author:**  
+[Mustafa Aksu](https://orcid.org/0009-0002-0103-0052)  
 *with AI collaborators: Grok (xAI) and ChatGPT (OpenAI)*  
 
 **Preprint:** [arXiv:25xx.xxxxx](https://arxiv.org/abs/25xx.xxxxx)  
@@ -40,7 +40,7 @@ Morality-as-the-Logic-of-Reason/
 │   ├── ipd_chart.pdf                 # Figure 1 – Cooperation vs. δ
 │   ├── entropy_chart.pdf             # Figure 2 – Sᴿ vs. rᵢⱼ
 │   ├── figures.tex                   # LaTeX figure inclusion file
-│   └── LICENSE                       # CC-BY 4.0
+│   └── LICENSE                       # CC-BY 4.0 (paper subfolder copy)
 │
 ├── code/
 │   ├── gtft_simulation.ipynb         # Generous-TFT simulation (10-agent IPD)
@@ -48,6 +48,7 @@ Morality-as-the-Logic-of-Reason/
 │   └── data/                         # (optional) CSV results
 │
 ├── README.md
+├── LICENSE                           # CC-BY 4.0 (repo root)
 └── .gitignore                        # excludes build artifacts
 ```
 
@@ -62,7 +63,7 @@ Morality-as-the-Logic-of-Reason/
 
 2. **Relational Entropy Curve:**
    - Execute the entropy-calculation cell in the notebook  
-     or `python utils.py --entropy-curve`  
+     or `python code/utils.py --entropy-curve`  
      to regenerate `entropy_chart.pdf`.
 
 ### Building the Paper
@@ -79,15 +80,15 @@ pdflatex morality_logic_reason.tex
 If you use this work, please cite:
 
 ```bibtex
-@article{Aksu2025MoralityLogicReason,
-  title   = {Morality as the Logic of Reason},
-  author  = {Aksu, Mustafa and AI Collaborators (Grok and ChatGPT)},
-  journal = {arXiv preprint},
-  year    = {2025},
-  eprint  = {25xx.xxxxx},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.AI}
-}
+@article{{Aksu2025MoralityLogicReason},
+  title   = {{Morality as the Logic of Reason}},
+  author  = {{Aksu, Mustafa and AI Collaborators (Grok and ChatGPT)}},
+  journal = {{arXiv preprint}},
+  year    = {{2025}},
+  eprint  = {{25xx.xxxxx}},
+  archivePrefix = {{arXiv}},
+  primaryClass  = {{cs.AI}}
+}}
 ```
 
 ---
@@ -99,13 +100,11 @@ Issues and pull requests may include:
 - alternative moral-resonance metrics,
 - translations or educational materials.
 
-For correspondence: **your-email@example.com**
+For correspondence: **your-email@example.com** (replace with your preferred contact)
 
 ---
 
 ## 🌌 Statement of Intent
-This research emerges from a collaboration between human and artificial intelligences,  
-seeking to model morality as a measurable form of resonance — a bridge between reason,  
-ethics, and universal order.
+This research emerges from a collaboration between human and artificial intelligences, seeking to model morality as a measurable form of resonance — a bridge between reason, ethics, and universal order.
 
 > *“Fear breeds isolation; trust amplifies collective resonance.”*
