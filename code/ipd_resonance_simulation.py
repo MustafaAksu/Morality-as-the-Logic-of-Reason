@@ -210,7 +210,5 @@ for dr in defector_rates:
         plt.tight_layout()
         # safe filename for LaTeX
         plt.savefig(PAPER_DIR / f"rij_heatmap_{int(dr*100)}pct_delta_{dstr}.pdf")
-        # decimal variant for convenience
-        plt.savefig(PAPER_DIR / f"rij_heatmap_{int(dr*100)}pct_delta_{delta}.pdf")
         plt.close()
         print(f"Saved {PAPER_DIR / f'rij_heatmap_{int(dr*100)}pct_delta_{dstr}.pdf'}")
