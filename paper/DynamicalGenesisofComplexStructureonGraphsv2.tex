@@ -1,21 +1,23 @@
 \documentclass[11pt,a4paper]{article}
 
-% --- Encoding & fonts (safer PDF outputs) ---
+% Encoding & fonts
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 
-% --- Math & theorem envs ---
+% Math & theorem envs
 \usepackage{amsmath,amssymb,amsthm}
 
-% --- Page geometry ---
+% Page geometry
 \usepackage{geometry}
 \geometry{margin=1in}
 
-% --- URLs & links ---
-\usepackage{url}
-\usepackage{hyperref}
+% URLs & links
+\usepackage[hyphens]{url}
 \usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+\Urlmuskip=0mu plus 1mu
 \hypersetup{
   colorlinks=true,
   linkcolor=blue!60!black,
@@ -25,25 +27,19 @@
   pdfauthor={Mustafa Aksu},
   pdfsubject={Discrete Kuramoto on graphs; Neimark--Sacker bifurcation; complex structure; U(1) holonomy; SU(2) lift},
   pdfkeywords={Kuramoto, Neimark--Sacker, complex structure, holonomy, SU(2), quaternion, discrete curvature, RTG},
-  pdfcreator={LaTeX},
-  pdfproducer={pdfTeX},
   pdfborder={0 0 0},
-  pdfdisplaydoctitle=true
+  pdfdisplaydoctitle=true,
+  breaklinks=true
 }
 
-% --- Figures (if you later add TikZ figures) ---
+% TikZ (optional)
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
 
-% --- Lists ---
+% Lists
 \usepackage{enumitem}
 
-% --- Metadata: DOI shown on title page ---
-\newcommand{\papertitle}{Dynamical Genesis of Complex Structure on Graphs:\\ Neimark--Sacker Bifurcation and Non-Abelian Holonomy}
-\newcommand{\paperdoi}{10.5281/zenodo.17568897}
-\newcommand{\paperyear}{2025}
-
-% --- Theorems ---
+% Theorems
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -51,20 +47,20 @@
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{definition}[theorem]{Definition}
 
-% --- Operators ---
-\DeclareMathOperator{\argmin}{arg\,min}
+% Operators
 \DeclareMathOperator{\SU}{SU}
 \DeclareMathOperator{\U}{U}
+\DeclareMathOperator{\SO}{SO}
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\spec}{spec}
-\DeclareMathOperator{\arccosop}{arccos}
 
-% --- Title & Authors ---
+% Metadata for title
+\newcommand{\papertitle}{Dynamical Genesis of Complex Structure on Graphs:\\ Neimark--Sacker Bifurcation and Non-Abelian Holonomy}
+\newcommand{\paperdoi}{10.5281/zenodo.17568897}
+
 \title{\papertitle}
-\author{Mustafa Aksu\thanks{%
-With contributions by Grok and ChatGPT (listed as \emph{contributors} in Zenodo metadata; sole human author of record).}}
-\date{10 November 2025 \\[2pt]
-\small DOI: \href{https://doi.org/\paperdoi}{\paperdoi}}
+\author{Mustafa Aksu\thanks{With contributions by Grok and ChatGPT (listed as \emph{contributors} in Zenodo metadata; sole human author of record).}}
+\date{10 November 2025\\[2pt]\small DOI: \href{https://doi.org/\paperdoi}{\paperdoi}}
 
 \begin{document}
 \maketitle
@@ -340,7 +336,6 @@ We thank the xAI team for assistance with literature searches and document prepa
 
 \begin{thebibliography}{99}
 
-% (same bibliography as your latest text)
 \bibitem{Acebron2005}
 Acebr\'{o}n, J. A., et al.,
 \emph{The Kuramoto model: A simple paradigm for synchronization phenomena},
@@ -432,9 +427,8 @@ Phys. D \textbf{143}, 1--20 (2000),
 doi: \href{https://doi.org/10.1016/S0167-2789(00)00094-4}{10.1016/S0167-2789(00)00094-4}.
 \end{thebibliography}
 
-% --- Optional: How to cite section for Zenodo landing page copy ---
 \section*{How to cite}
-Aksu, M. (\paperyear). \textit{\papertitle}. Zenodo. \href{https://doi.org/\paperdoi}{https://doi.org/\paperdoi}. \\
+Aksu, M. (2025). \textit{\papertitle}. Zenodo. \href{https://doi.org/\paperdoi}{\paperdoi}. \\
 \textit{Contributors (non-author):} Grok; ChatGPT.
 
 \end{document}
