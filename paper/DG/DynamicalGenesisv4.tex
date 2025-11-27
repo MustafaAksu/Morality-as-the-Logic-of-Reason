@@ -374,7 +374,28 @@ again consistent with a 2D quasiperiodic torus.  Throughout the run the triangle
 \[
 F_\triangle\approx-2.094\ \mathrm{rad}=-\frac{2\pi}{3},
 \]
-and the lifted $\SU(2)$ holonomy satisfies $\tfrac{1}{2}\Tr(H)\approx\cos(F_\triangle/2)\approx0.5$, verifying the trace--angle relation at the NS rung.
+and the lifted $\SU(2)$ holonomy satisfies $\tfrac{1}{2}\Tr(H)\approx\cos(F_\triangle/2)\approx0.5$, verifying the trace--angle relation at the NS rung.  Representative diagnostics are shown in Figure~\ref{fig:k3_ns}.
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{inertial_dt0.100_explicit_dir_angle_vs_K.png}
+    \caption{Leading eigenangle vs.\ coupling $K$; the NS crossing occurs where $|\lambda|=1$ with $\arg\lambda$ bounded away from $0$ and $\pi$.}
+  \end{subfigure}\hfill
+  \begin{subfigure}{.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{ns_confirm_phase.png}
+    \caption{Phase portrait $(\theta_1-\theta_2,\theta_2-\theta_3)$ just above $K_c$, forming a thin annulus (invariant circle).}
+  \end{subfigure}\hfill
+  \begin{subfigure}{.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{ns_confirm_psd.png}
+    \caption{PSD of $r(t)$ just above $K_c$, with a single dominant peak close to the predicted NS frequency.}
+  \end{subfigure}
+  \caption{Neimark--Sacker confirmation suite on the directed, frustrated $K_3$ under the inertial explicit-Euler scheme.}
+  \label{fig:k3_ns}
+\end{figure}
 
 \subsection{Tuned double NS on symmetric, frustrated $K_4$}
 
@@ -474,7 +495,49 @@ We estimate the top six Lyapunov exponents at $K_{\mathrm{run}}$ using a QR-base
 per step.  The first two are numerically indistinguishable from zero at the level of our computation, while the remaining four are strongly negative, with $|\mathrm{LE}_3|/|\mathrm{LE}_1|\sim10^6$.  This is exactly the spectrum one expects for a robust 4D attracting torus: two neutral directions tangent to the torus and four strongly contracting transverse directions.
 
 \paragraph{Robustness and parameter sensitivity.}
-The double-NS event itself is tuned: small variations in $w_{\mathrm{diag}}$ or $\sigma_2$ of order $\pm5\%$ either merge the two critical $K_j^*$ into a more degenerate crossing or separate them beyond overlap so that the associated tori no longer interact.  However, once $K$ is chosen in the narrow window between $K_1^*$ and $K_2^*$, the observed torus is robust: adding weak noise (up to $\sigma_{\mathrm{noise}}\lesssim10^{-4}$) or perturbing $K$ by $\mathcal{O}(10^{-5})$ does not destroy quasiperiodicity over runs of length $T\gtrsim10^6$ steps.  This supports the interpretation of the observed structure as a genuine codimension-two double NS torus.
+The double-NS event itself is tuned: small variations in $w_{\mathrm{diag}}$ or $\sigma_2$ of order $\pm5\%$ either merge the two critical $K_j^*$ into a more degenerate crossing or separate them beyond overlap so that the associated tori no longer interact.  However, once $K$ is chosen in the narrow window between $K_1^*$ and $K_2^*$, the observed torus is robust: adding weak noise (up to $\sigma_{\mathrm{noise}}\lesssim10^{-4}$) or perturbing $K$ by $\mathcal{O}(10^{-5})$ does not destroy quasiperiodicity over runs of length $T\gtrsim10^6$ steps.  This supports the interpretation of the observed structure as a genuine codimension-two double NS torus.  A summary of the main diagnostics is shown in Figure~\ref{fig:k4_double_ns}.
+
+\begin{figure}[t]
+  \centering
+  % Row 1
+  \begin{subfigure}{.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{flux_su2_series.png}
+    \caption{Triangle flux $F_\triangle(t)$ on a representative face, locked near $-2\pi/3$ throughout the post-burn run.}
+  \end{subfigure}\hfill
+  \begin{subfigure}{.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{k4_psd.png}
+    \caption{PSD of $r(t)$ at $K \approx K_2^* + 5\times10^{-7}$, with a dominant peak and a small shoulder from the second NS mode.}
+  \end{subfigure}\hfill
+  \begin{subfigure}{.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{mode_amps.png}
+    \caption{Modal amplitudes $A_1(t),A_2(t)$ for the two NS pairs, both saturating at comparable $\mathcal{O}(10^{-1})$ values.}
+  \end{subfigure}
+
+  \medskip
+
+  % Row 2
+  \begin{subfigure}{.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{freq_ratio_hist.png}
+    \caption{Histogram of instantaneous frequency ratios $\omega_0(t)/\omega_1(t)$, with broad support and no prominent low-order rational peaks.}
+  \end{subfigure}\hfill
+  \begin{subfigure}{.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{poincare_section.png}
+    \caption{Poincar\'e section at $\theta_0-\theta_1\equiv 0 \ (\mathrm{mod}\ 2\pi)$, forming a smooth 1D curve as expected for a 2-torus slice.}
+  \end{subfigure}\hfill
+  \begin{subfigure}{.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{return_map_r.png}
+    \caption{Return map $r(t)$ vs.\ $r(t+\tau)$ at the dominant period, forming a closed loop characteristic of quasiperiodic motion.}
+  \end{subfigure}
+
+  \caption{Diagnostics for the tuned double Neimark--Sacker torus on the symmetric, frustrated $K_4$.  Together these confirm a robust 4D attracting torus with two incommensurate rotations and locked frustrated holonomy.}
+  \label{fig:k4_double_ns}
+\end{figure}
 
 \section{Computational methods}
 
